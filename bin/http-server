@@ -22,6 +22,8 @@ if (argv.h || argv.help) {
     '  -a           Address to use [0.0.0.0]',
     '  -d           Show directory listings [true]',
     '  -i           Display autoIndex [true]',
+    '  -f [path]         Enable fallback handling by redirecting failed requests (404) to',
+    '  --fallback=[path] the given URL'
     '  -g --gzip    Serve gzip files when possible [false]',
     '  -e --ext     Default file extension if none supplied [none]',
     '  -s --silent  Suppress log messages from output',
@@ -103,7 +105,10 @@ function listen(port) {
     ext: argv.e || argv.ext,
     logFn: logger.request,
     proxy: proxy,
-    showDotfiles: argv.dotfiles
+    showDotfiles: argv.dotfiles,
+    fallback: !!argv.f ? ('string' === typeof argv.f && 'true' !== argv.f ? argv.f : true)
+              :
+              (!!argv.fallback ? ('string' === typeof argv.fallback && 'true' !== argv.fallback ? argv.fallback : true) : false)
   };
 
   if (argv.cors) {
