@@ -1,11 +1,11 @@
 {
-  "name": "http-server",
+  "name": "@actra-development-oss/http-server",
   "version": "0.11.1",
-  "description": "A simple zero-configuration command-line http server",
+  "description": "A simple zero-configuration command-line http server with support for SPAs",
   "main": "./lib/http-server",
   "repository": {
     "type": "git",
-    "url": "git://github.com/indexzero/http-server.git"
+    "url": "git://github.com/actra-development-oss/http-server.git"
   },
   "keywords": [
     "cli",
