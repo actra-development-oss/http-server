@@ -23,7 +23,7 @@ if (argv.h || argv.help) {
     '  -d           Show directory listings [true]',
     '  -i           Display autoIndex [true]',
     '  -f [path]         Enable fallback handling by redirecting failed requests (404) to',
-    '  --fallback=[path] the given URL'
+    '  --fallback=[path] the given URL',
     '  -g --gzip    Serve gzip files when possible [false]',
     '  -e --ext     Default file extension if none supplied [none]',
     '  -s --silent  Suppress log messages from output',
