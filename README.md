@@ -29,39 +29,39 @@ This will install `http-server` globally so that it may be run from the command 
 
 ## Available Options:
 
-`-p` Port to use (defaults to 8080)
+`-p <port>` Port to use (defaults to 8080)
 
-`-a` Address to use (defaults to 0.0.0.0)
+`-a <address>` Address to use (defaults to 0.0.0.0)
 
 `-d` Show directory listings (defaults to 'True')
 
 `-i` Display autoIndex (defaults to 'True')
 
- `-f [path]` or `--fallback=[path]` Enable fallback handling by redirecting failed requests (404) to the given URL
+ `-f <path>` or `--fallback=<path>` Enable fallback handling by redirecting failed requests (404) to the given URL
 
 `-g` or `--gzip` When enabled (defaults to 'False') it will serve `./public/some-file.js.gz` in place of `./public/some-file.js` when a gzipped version of the file exists and the request accepts gzip encoding.
 
-`-e` or `--ext` Default file extension if none supplied (defaults to 'html')
+`-e [ext]` or `--ext[=ext]` Default file extension if none supplied (defaults to 'html' when -e or --ext is specified without giving an extension)
 
 `-s` or `--silent` Suppress log messages from output
 
-`--cors` Enable CORS via the `Access-Control-Allow-Origin` header
+`--cors[=headers]` Enable CORS via the `Access-Control-Allow-Origin` header, optionally specify additionally allowed headers as comma-separated list
 
-`-o` Open browser window after starting the server
+`-o [url]` Open browser window after starting the server, optionally specify the full URL (including protocol and host) to open
 
-`-c` Set cache time (in seconds) for cache-control max-age header, e.g. -c10 for 10 seconds (defaults to '3600'). To disable caching, use -c-1.
+`-c[seconds]` Set cache time (in seconds) for cache-control max-age header, e.g. -c10 for 10 seconds (defaults to '3600'). To disable caching, use -c-1.
 
 `-U` or `--utc` Use UTC time format in log messages.
 
-`-P` or `--proxy` Proxies all requests which can't be resolved locally to the given url. e.g.: -P http://someurl.com
+`-P <url>` or `--proxy=<url>` Proxies all requests which can't be resolved locally to the given url. e.g.: -P http://someurl.com
 
 `-S` or `--ssl` Enable https.
 
-`-C` or `--cert` Path to ssl cert file (default: cert.pem).
+`-C [path]` or `--cert[=path]` Path to ssl cert file (default: cert.pem).
 
-`-K` or `--key` Path to ssl key file (default: key.pem).
+`-K [path]` or `--key[=path]` Path to ssl key file (default: key.pem).
 
-`-r` or `--robots` Provide a /robots.txt (whose content defaults to 'User-agent: *\nDisallow: /')
+`-r [string]` or `--robots[=string]` Provide a /robots.txt (whose content defaults to 'User-agent: *\nDisallow: /')
 
 `-h` or `--help` Print this list and exit.
 

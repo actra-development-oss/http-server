@@ -1,6 +1,6 @@
 {
   "name": "@actra-development-oss/http-server",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "A simple zero-configuration command-line http server with support for SPAs",
   "main": "./lib/http-server",
   "repository": {
@@ -63,6 +63,10 @@
     {
       "name": "BigBlueHat",
       "email": "byoung@bigbluehat.com"
+    },
+    {
+      "name": "Gabriel Schuster",
+      "email": "opensource@actra.de"
     }
   ],
   "dependencies": {
